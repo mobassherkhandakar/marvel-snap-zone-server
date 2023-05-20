@@ -74,7 +74,8 @@ async function run() {
 
     app.get('/mytoy/:email', async(req,res)=>{
       const email = req.params.email;
-      const result = await toyCallection.find({ email: email}).toArray()
+      const query = {email: email}
+      const result = await toyCallection.find(query).toArray()
       res.send(result)
     })
 
