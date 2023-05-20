@@ -86,12 +86,12 @@ async function run() {
       res.send(result)
     })
 
-    // app.post('/addedToy', async(req,res)=>{
-    //   const body = req.body;
-    //   // console.log(body);
-    //   const result = await toyCallection.insertOne(body)
-    //   res.send(result)
-    // })
+    app.post('/addedToy', async(req,res)=>{
+      const body = req.body;
+      // console.log(body);
+      const result = await toyCallection.insertOne(body)
+      res.send(result)
+    })
 
 
 
