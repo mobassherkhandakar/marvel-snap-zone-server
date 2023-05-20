@@ -72,11 +72,11 @@ async function run() {
       res.send(result)
     })
 
-    // app.get('/mytoy/:email', async(req,res)=>{
-    //   const email = req.params.email;
-    //   const result = await toyCallection.find({ email: email}).toArray()
-    //   res.send(result)
-    // })
+    app.get('/mytoy/:email', async(req,res)=>{
+      const email = req.params.email;
+      const result = await toyCallection.find({ email: email}).toArray()
+      res.send(result)
+    })
 
     // app.delete('/mytoy/:id', async(req,res)=>{
     //   const id = req.params.id;
