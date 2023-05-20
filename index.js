@@ -37,6 +37,19 @@ async function run() {
       res.send(alltoy)
     })
 
+
+    app.get("/getToyByCategory/:category", async (req, res) => {
+      console.log(req.params.id);
+      const toys = await toyCallection
+        .find({
+          catagory: req.params.category,
+        })
+        .toArray();
+      res.send(toys);
+    });
+
+
+
     app.get('/update/:id', async(req,res)=>{
       const id = req.params.id;
       const query = {_id: new ObjectId(id)}
