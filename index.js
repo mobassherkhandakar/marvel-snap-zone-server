@@ -28,9 +28,9 @@ async function run() {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
     const toyCallection = client.db('carsToyDB').collection('carToys')
-    const indexKeys = {toyName: 1}
-    const indexOptions = { name: "toyNames" };
-    const result = await toyCallection.createIndex(indexKeys, indexOptions)
+    // const indexKeys = {toyName: 1}
+    // const indexOptions = { name: "toyNames" };
+    // const result = await toyCallection.createIndex(indexKeys, indexOptions)
 
     app.get('/allToy', async(req,res)=>{
       const alltoy = await toyCallection.find().toArray()
