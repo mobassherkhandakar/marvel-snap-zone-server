@@ -72,26 +72,26 @@ async function run() {
       res.send(result)
     })
 
-    app.get('/mytoy/:email', async(req,res)=>{
-      const email = req.params.email;
-      const result = await toyCallection.find({ email: email}).toArray()
-      res.send(result)
-    })
+    // app.get('/mytoy/:email', async(req,res)=>{
+    //   const email = req.params.email;
+    //   const result = await toyCallection.find({ email: email}).toArray()
+    //   res.send(result)
+    // })
 
-    app.delete('/mytoy/:id', async(req,res)=>{
-      const id = req.params.id;
-      console.log(id);
-      const query = {_id: new ObjectId(id)}
-      const result = await toyCallection.deleteOne(query)
-      res.send(result)
-    })
+    // app.delete('/mytoy/:id', async(req,res)=>{
+    //   const id = req.params.id;
+    //   console.log(id);
+    //   const query = {_id: new ObjectId(id)}
+    //   const result = await toyCallection.deleteOne(query)
+    //   res.send(result)
+    // })
 
-    app.post('/addedToy', async(req,res)=>{
-      const body = req.body;
-      // console.log(body);
-      const result = await toyCallection.insertOne(body)
-      res.send(result)
-    })
+    // app.post('/addedToy', async(req,res)=>{
+    //   const body = req.body;
+    //   // console.log(body);
+    //   const result = await toyCallection.insertOne(body)
+    //   res.send(result)
+    // })
 
 
 
